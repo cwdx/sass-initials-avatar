@@ -1,0 +1,114 @@
+/*
+  Sass Initials (c) Chris C. Wijnia
+*/
+
+// README
+//
+// Example HTML markup:
+//
+// Two initials without extra sizing classes
+// <span class="initials" data-initials="cw" title="Chris C. Wijnia"></span>
+//
+// One initial with sizing data attribute
+// <span class="initial" data-size="xs" data-initials="c" title="Chris C. Wijnia"></span>
+//
+// One initial with sizing data attribute fluidly
+// <span class="initial" data-size="xs fluid" data-initials="c" title="Chris C. Wijnia"></span>
+//
+//
+// Custom config example:
+//
+// $initials-sizes: (
+//   xxs:  15px, 
+//   xs:   25px, 
+//   sm:   35px,
+//   md:   75px,
+//   lg:   100px,
+//   xlg:  150px,
+//   xxlg: 200px);    
+
+// DEFAULT CONFIG
+$initials-class-name:   initials-avatar      !default;
+$initials-roundness:    50%                  !default;
+$initials-font:         Georgia, serif       !default;
+$initials-weight:       bold                 !default;
+$initials-font-size:    0.6                  !default; // Scale font size. 1 is base
+$initials-line-height:  0.95                 !default; // Adjust vertical alignment. 1 is base
+$initials-size-base:    50px                 !default;
+$initials-sizes: (
+  xs: 25px, 
+  sm: 35px,
+  md: 75px,
+  lg: 100px)                                 !default;
+$initials-sizes-fluid: (
+  (breakpoint: 400px):  25px, 
+  (breakpoint: 700px):  35px,
+  (breakpoint: 900px):  75px,
+  (breakpoint: 1200px): 100px)               !default;
+$initials-text-color:   rgba(white, 0.8)     !default;
+$initials-color-base:   #CDDC39              !default;
+$initials-color-variants: (
+  a: #26A69A,  n: #6A1B9A,
+  b: #00897B,  o: #B0BEC5,
+  c: #FBC02D,  p: #90A4AE,
+  d: #FF8F00,  q: #37474F,
+  e: #66BB6A,  r: #6D4C41,
+  f: #43A047,  s: #8D6E63,
+  g: #FB8C00,  t: #F48FB1,
+  h: #EF6C00,  u: #EC407A,
+  i: #0288D1,  v: #e57373,
+  j: #0D47A1,  w: #BDBDBD,
+  k: #f44336,  x: #616161,
+  l: #c62828,  y: #AFB42B,
+  m: #BA68C8,  z: #BF360C)                   !default;
+
+// Base styling
+.#{$initials-class-name} {
+  
+  // Mixin for easily genarating custom sizes
+  @mixin generate-size($size: $initials-size-base) {
+    width:        $size;
+    height:       $size;
+    line-height:  $size;
+    font-size:    ($size * $initials-font-size);
+    line-height:  ($size * $initials-line-height);
+  }
+  
+  &:after { content: attr(data-initials); }
+  @include generate-size;
+  display:         inline-block;
+  overflow:        hidden;
+  text-transform:  uppercase;
+  text-align:      center;
+  border-radius:   $initials-roundness;
+  font-family:     $initials-font;
+  font-weight:     $initials-weight;
+  color:           $initials-text-color;  
+  background:      $initials-color-base;
+  
+  // Generate color variants
+  @each $letter, $color in $initials-color-variants {
+    $letter-upper: to-upper-case($letter);
+
+    &[data-initials^="#{$letter}"],
+    &[data-initials^="#{$letter-upper}"] {
+      background: $color; 
+    }
+  }
+  
+  // Generate sizes
+  @each $size-name, $size in $initials-sizes {
+    &[data-size*="#{$size-name}"] {
+      @include generate-size($size);
+    }
+  }
+  
+  // Generate fluid sizes
+  @each $breakpoint, $size in $initials-sizes-fluid {
+    &[data-size*="fluid"] {
+      @media screen and (min-width: map-get($breakpoint, breakpoint)) { 
+        @include generate-size($size); 
+      }  
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+body {
+  font-family: Roboto Slab;
+  font-size: 16px; }
+
+/*
+  Sass Initials (c) Chris C. Wijnia
+*/
+.initials-avatar {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  line-height: 47.5px;
+  display: inline-block;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50%;
+  font-family: Roboto slab;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  background: #CDDC39; }
+  .initials-avatar:after {
+    content: attr(data-initials); }
+  .initials-avatar[data-initials^="a"], .initials-avatar[data-initials^="A"] {
+    background: #26A69A; }
+  .initials-avatar[data-initials^="n"], .initials-avatar[data-initials^="N"] {
+    background: #6A1B9A; }
+  .initials-avatar[data-initials^="b"], .initials-avatar[data-initials^="B"] {
+    background: #00897B; }
+  .initials-avatar[data-initials^="o"], .initials-avatar[data-initials^="O"] {
+    background: #B0BEC5; }
+  .initials-avatar[data-initials^="c"], .initials-avatar[data-initials^="C"] {
+    background: #FBC02D; }
+  .initials-avatar[data-initials^="p"], .initials-avatar[data-initials^="P"] {
+    background: #90A4AE; }
+  .initials-avatar[data-initials^="d"], .initials-avatar[data-initials^="D"] {
+    background: #FF8F00; }
+  .initials-avatar[data-initials^="q"], .initials-avatar[data-initials^="Q"] {
+    background: #37474F; }
+  .initials-avatar[data-initials^="e"], .initials-avatar[data-initials^="E"] {
+    background: #66BB6A; }
+  .initials-avatar[data-initials^="r"], .initials-avatar[data-initials^="R"] {
+    background: #6D4C41; }
+  .initials-avatar[data-initials^="f"], .initials-avatar[data-initials^="F"] {
+    background: #43A047; }
+  .initials-avatar[data-initials^="s"], .initials-avatar[data-initials^="S"] {
+    background: #8D6E63; }
+  .initials-avatar[data-initials^="g"], .initials-avatar[data-initials^="G"] {
+    background: #FB8C00; }
+  .initials-avatar[data-initials^="t"], .initials-avatar[data-initials^="T"] {
+    background: #F48FB1; }
+  .initials-avatar[data-initials^="h"], .initials-avatar[data-initials^="H"] {
+    background: #EF6C00; }
+  .initials-avatar[data-initials^="u"], .initials-avatar[data-initials^="U"] {
+    background: #EC407A; }
+  .initials-avatar[data-initials^="i"], .initials-avatar[data-initials^="I"] {
+    background: #0288D1; }
+  .initials-avatar[data-initials^="v"], .initials-avatar[data-initials^="V"] {
+    background: #e57373; }
+  .initials-avatar[data-initials^="j"], .initials-avatar[data-initials^="J"] {
+    background: #0D47A1; }
+  .initials-avatar[data-initials^="w"], .initials-avatar[data-initials^="W"] {
+    background: #BDBDBD; }
+  .initials-avatar[data-initials^="k"], .initials-avatar[data-initials^="K"] {
+    background: #f44336; }
+  .initials-avatar[data-initials^="x"], .initials-avatar[data-initials^="X"] {
+    background: #616161; }
+  .initials-avatar[data-initials^="l"], .initials-avatar[data-initials^="L"] {
+    background: #c62828; }
+  .initials-avatar[data-initials^="y"], .initials-avatar[data-initials^="Y"] {
+    background: #AFB42B; }
+  .initials-avatar[data-initials^="m"], .initials-avatar[data-initials^="M"] {
+    background: #BA68C8; }
+  .initials-avatar[data-initials^="z"], .initials-avatar[data-initials^="Z"] {
+    background: #BF360C; }
+  .initials-avatar[data-size*="xxs"] {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 9px;
+    line-height: 14.25px; }
+  .initials-avatar[data-size*="xs"] {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    line-height: 23.75px; }
+  .initials-avatar[data-size*="sm"] {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 21px;
+    line-height: 33.25px; }
+  .initials-avatar[data-size*="md"] {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 45px;
+    line-height: 71.25px; }
+  .initials-avatar[data-size*="lg"] {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 60px;
+    line-height: 95px; }
+  .initials-avatar[data-size*="xlg"] {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 90px;
+    line-height: 142.5px; }
+  .initials-avatar[data-size*="xxlg"] {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 120px;
+    line-height: 190px; }
+  @media screen and (min-width: 400px) {
+    .initials-avatar[data-size*="fluid"] {
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 15px;
+      line-height: 23.75px; } }
+  @media screen and (min-width: 700px) {
+    .initials-avatar[data-size*="fluid"] {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 21px;
+      line-height: 33.25px; } }
+  @media screen and (min-width: 900px) {
+    .initials-avatar[data-size*="fluid"] {
+      width: 75px;
+      height: 75px;
+      line-height: 75px;
+      font-size: 45px;
+      line-height: 71.25px; } }
+  @media screen and (min-width: 1200px) {
+    .initials-avatar[data-size*="fluid"] {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 60px;
+      line-height: 95px; } }
