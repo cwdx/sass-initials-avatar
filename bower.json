@@ -1,0 +1,30 @@
+{
+  "name": "sass-initials-avatar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/christhebutcher/sass-initials-avatar",
+  "authors": [
+    "ChrisTheButcher <ccwijnia@gmail.com>"
+  ],
+  "description": "Create easy to use initials avatars like Google Inbox or Apple Mail",
+  "main": "initials-avatar.scss",
+  "keywords": [
+    "avatars",
+    "initials",
+    "google",
+    "inbox",
+    "apple",
+    "mail",
+    "sass",
+    "scss",
+    "user images",
+    "profile pictures"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
