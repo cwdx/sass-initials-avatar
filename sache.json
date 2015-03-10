@@ -1,0 +1,18 @@
+{
+  "name": "Initials Avatar",
+  "description": "reate easy to use initials avatars like Google Inbox or Apple Mail",
+  "tags": [    
+  	"avatars",
+    "initials",
+    "google",
+    "inbox",
+    "apple",
+    "mail",
+    "sass",
+    "scss",
+    "user images",
+    "profile pictures"
+  ],
+  "website": "https://github.com/christhebutcher/sass-initials-avatar/README.md",
+  "docs": "https://github.com/christhebutcher/sass-initials-avatar/README.md"
+}
